@@ -78,7 +78,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Daniel Mason"
-uri = "https://www.danielmason.com"
+uri = "https://www.linkedin.com/in/danieljamesmason/"
 
 [node name="AssetAuthors" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -112,16 +112,34 @@ vertical_alignment = 1
 [node name="AssetCreditsGrid" type="GridContainer" parent="AssetAuthors"]
 layout_mode = 2
 size_flags_horizontal = 4
-columns = 2
+columns = 5
 
-[node name="MatemasieLabel" type="Label" parent="AssetAuthors/AssetCreditsGrid"]
+[node name="MatemasieLink" type="LinkButton" parent="AssetAuthors/AssetCreditsGrid"]
 layout_mode = 2
-text = "Matemasie Font"
+size_flags_horizontal = 8
+text = "MateMasie Font"
+uri = "https://fonts.google.com/specimen/Matemasie"
 
 [node name="AdamYeoLink" type="LinkButton" parent="AssetAuthors/AssetCreditsGrid"]
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 0
 text = "Adam Yeo"
 uri = "https://www.linkedin.com/in/adam-yeo/"
+
+[node name="Label" type="Label" parent="AssetAuthors/AssetCreditsGrid"]
+layout_mode = 2
+text = "                                        "
+
+[node name="SoftBody2DLink" type="LinkButton" parent="AssetAuthors/AssetCreditsGrid"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "SoftBody2D"
+uri = "https://github.com/appsinacup/godot-softbody2d"
+
+[node name="DragosDaianLink" type="LinkButton" parent="AssetAuthors/AssetCreditsGrid"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Dragos Daian"
+uri = "https://www.linkedin.com/in/dragos-daian-aa29b7a7/"
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

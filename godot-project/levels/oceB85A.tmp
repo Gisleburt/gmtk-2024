@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://bv1qd5upjlm5l"]
+
+[ext_resource type="PackedScene" uid="uid://to86pewsgyji" path="res://characters/the_blat.tscn" id="1_j3vx4"]
+[ext_resource type="Texture2D" uid="uid://be7oaus8qlnmk" path="res://icon.svg" id="2_3voju"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lfdov"]
+radius = 64.0312
+
+[node name="Ocean" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(708, 270)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("2_3voju")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+shape = SubResource("CircleShape2D_lfdov")
+
+[node name="TheBlat" parent="." instance=ExtResource("1_j3vx4")]
+position = Vector2(388, -109)
+scale = Vector2(3.35665, 3.35665)
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2(435, 584)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D2"]
+texture = ExtResource("2_3voju")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/StaticBody2D"]
+shape = SubResource("CircleShape2D_lfdov")

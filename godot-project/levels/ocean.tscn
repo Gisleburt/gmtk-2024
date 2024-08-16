@@ -8,16 +8,30 @@ radius = 64.0312
 
 [node name="Ocean" type="Node2D"]
 
-[node name="TheBlat" parent="." instance=ExtResource("1_j3vx4")]
-visible = false
-
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(581, 271)
+position = Vector2(708, 270)
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D"]
 texture = ExtResource("2_3voju")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="Node2D"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+shape = SubResource("CircleShape2D_lfdov")
+
+[node name="TheBlat" parent="." instance=ExtResource("1_j3vx4")]
+position = Vector2(571, 35)
+scale = Vector2(3.35665, 3.35665)
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2(435, 584)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D2"]
+texture = ExtResource("2_3voju")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/StaticBody2D"]
 shape = SubResource("CircleShape2D_lfdov")

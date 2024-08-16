@@ -93,4 +93,5 @@ grow_horizontal = 0
 grow_vertical = 0
 text = "Version: "
 
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]

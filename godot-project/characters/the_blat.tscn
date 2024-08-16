@@ -1,3 +1,222 @@
-[gd_scene format=3 uid="uid://to86pewsgyji"]
+[gd_scene load_steps=4 format=3 uid="uid://to86pewsgyji"]
+
+[ext_resource type="Script" path="res://characters/the_blat.gd" id="1_u2vo1"]
+[ext_resource type="Texture2D" uid="uid://bp3sh5603bwmk" path="res://assets/TheBlatBody.svg" id="1_usc5t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mp40a"]
 
 [node name="TheBlat" type="Node2D"]
+script = ExtResource("1_u2vo1")
+
+[node name="Sprite2D" type="Polygon2D" parent="."]
+texture = ExtResource("1_usc5t")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(-9, -42, -9, -41, -13, -41, -13, -40, -15, -40, -15, -39, -18, -39, -18, -38, -20, -38, -20, -37, -22, -37, -22, -36, -23, -36, -23, -35, -25, -35, -25, -34, -26, -34, -26, -33, -27, -33, -27, -32, -28, -32, -28, -31, -29, -31, -29, -30, -30, -30, -30, -29, -31, -29, -31, -28, -32, -28, -32, -27, -33, -27, -33, -26, -34, -26, -34, -25, -35, -25, -35, -23, -36, -23, -36, -22, -37, -22, -37, -20, -38, -20, -38, -18, -39, -18, -39, -15, -40, -15, -40, -13, -41, -13, -41, -9, -42, -9, -42, 9, -41, 9, -41, 13, -40, 13, -40, 15, -39, 15, -39, 18, -38, 18, -38, 20, -37, 20, -37, 21, -36, 21, -36, 23, -35, 23, -35, 25, -34, 25, -34, 26, -33, 26, -33, 27, -32, 27, -32, 28, -31, 28, -31, 29, -30, 29, -30, 30, -29, 30, -29, 31, -28, 31, -28, 32, -27, 32, -27, 33, -26, 33, -26, 34, -25, 34, -25, 35, -23, 35, -23, 36, -21, 36, -21, 37, -20, 37, -20, 38, -18, 38, -18, 39, -15, 39, -15, 40, -12, 40, -12, 41, -9, 41, -9, 42, 9, 42, 9, 41, 12, 41, 12, 40, 15, 40, 15, 39, 18, 39, 18, 38, 20, 38, 20, 37, 21, 37, 21, 36, 23, 36, 23, 35, 25, 35, 25, 34, 26, 34, 26, 33, 27, 33, 27, 32, 28, 32, 28, 31, 29, 31, 29, 30, 30, 30, 30, 29, 31, 29, 31, 28, 32, 28, 32, 27, 33, 27, 33, 26, 34, 26, 34, 25, 35, 25, 35, 23, 36, 23, 36, 21, 37, 21, 37, 20, 38, 20, 38, 18, 39, 18, 39, 15, 40, 15, 40, 12, 41, 12, 41, 9, 42, 9, 42, -9, 41, -9, 41, -12, 40, -12, 40, -15, 39, -15, 39, -18, 38, -18, 38, -20, 37, -20, 37, -21, 36, -21, 36, -23, 35, -23, 35, -25, 34, -25, 34, -26, 33, -26, 33, -27, 32, -27, 32, -28, 31, -28, 31, -29, 30, -29, 30, -30, 29, -30, 29, -31, 28, -31, 28, -32, 27, -32, 27, -33, 26, -33, 26, -34, 25, -34, 25, -35, 23, -35, 23, -36, 21, -36, 21, -37, 20, -37, 20, -38, 18, -38, 18, -39, 15, -39, 15, -40, 13, -40, 13, -41, 9, -41, 9, -42, -0.414658, 1.38985)
+uv = PackedVector2Array(41, 8, 41, 9, 37, 9, 37, 10, 35, 10, 35, 11, 32, 11, 32, 12, 30, 12, 30, 13, 28, 13, 28, 14, 27, 14, 27, 15, 25, 15, 25, 16, 24, 16, 24, 17, 23, 17, 23, 18, 22, 18, 22, 19, 21, 19, 21, 20, 20, 20, 20, 21, 19, 21, 19, 22, 18, 22, 18, 23, 17, 23, 17, 24, 16, 24, 16, 25, 15, 25, 15, 27, 14, 27, 14, 28, 13, 28, 13, 30, 12, 30, 12, 32, 11, 32, 11, 35, 10, 35, 10, 37, 9, 37, 9, 41, 8, 41, 8, 59, 9, 59, 9, 63, 10, 63, 10, 65, 11, 65, 11, 68, 12, 68, 12, 70, 13, 70, 13, 71, 14, 71, 14, 73, 15, 73, 15, 75, 16, 75, 16, 76, 17, 76, 17, 77, 18, 77, 18, 78, 19, 78, 19, 79, 20, 79, 20, 80, 21, 80, 21, 81, 22, 81, 22, 82, 23, 82, 23, 83, 24, 83, 24, 84, 25, 84, 25, 85, 27, 85, 27, 86, 29, 86, 29, 87, 30, 87, 30, 88, 32, 88, 32, 89, 35, 89, 35, 90, 38, 90, 38, 91, 41, 91, 41, 92, 59, 92, 59, 91, 62, 91, 62, 90, 65, 90, 65, 89, 68, 89, 68, 88, 70, 88, 70, 87, 71, 87, 71, 86, 73, 86, 73, 85, 75, 85, 75, 84, 76, 84, 76, 83, 77, 83, 77, 82, 78, 82, 78, 81, 79, 81, 79, 80, 80, 80, 80, 79, 81, 79, 81, 78, 82, 78, 82, 77, 83, 77, 83, 76, 84, 76, 84, 75, 85, 75, 85, 73, 86, 73, 86, 71, 87, 71, 87, 70, 88, 70, 88, 68, 89, 68, 89, 65, 90, 65, 90, 62, 91, 62, 91, 59, 92, 59, 92, 41, 91, 41, 91, 38, 90, 38, 90, 35, 89, 35, 89, 32, 88, 32, 88, 30, 87, 30, 87, 29, 86, 29, 86, 27, 85, 27, 85, 25, 84, 25, 84, 24, 83, 24, 83, 23, 82, 23, 82, 22, 81, 22, 81, 21, 80, 21, 80, 20, 79, 20, 79, 19, 78, 19, 78, 18, 77, 18, 77, 17, 76, 17, 76, 16, 75, 16, 75, 15, 73, 15, 73, 14, 71, 14, 71, 13, 70, 13, 70, 12, 68, 12, 68, 11, 65, 11, 65, 10, 63, 10, 63, 9, 59, 9, 59, 8, -0.414658, 1.38985)
+polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195)]
+bones = ["Bone2D_0", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1), "Bone2D_1", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0), "Bone2D_2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Bone2D_3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Bone2D_4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Bone2D_5", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Bone2D_6", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Bone2D_7", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Bone2D_8", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 1
+
+[node name="RigidBody2D_0" type="RigidBody2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D_0"]
+shape = SubResource("CircleShape2D_mp40a")
+
+[node name="RigidBody2D_1" type="RigidBody2D" parent="."]
+position = Vector2(0, -32)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D_1"]
+shape = SubResource("CircleShape2D_mp40a")
+
+[node name="DampedSpringJoint2D00" type="DampedSpringJoint2D" parent="RigidBody2D_1"]
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody2D_0")
+length = 32.0
+
+[node name="DampedSpringJoint2D01" type="DampedSpringJoint2D" parent="RigidBody2D_1"]
+rotation = -1.17708
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody2D_2")
+length = 26.0
+
+[node name="RigidBody2D_2" type="RigidBody2D" parent="."]
+position = Vector2(24, -22)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D_2"]
+shape = SubResource("CircleShape2D_mp40a")
+
+[node name="DampedSpringJoint2D00" type="DampedSpringJoint2D" parent="RigidBody2D_2"]
+rotation = 0.837944
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody2D_0")
+length = 32.0
+
+[node name="DampedSpringJoint2D01" type="DampedSpringJoint2D" parent="RigidBody2D_2"]
+rotation = -0.339135
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody2D_3")
+length = 24.0
+
+[node name="RigidBody2D_3" type="RigidBody2D" parent="."]
+position = Vector2(32, 0)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D_3"]
+shape = SubResource("CircleShape2D_mp40a")
+
+[node name="DampedSpringJoint2D00" type="DampedSpringJoint2D" parent="RigidBody2D_3"]
+rotation = 1.55254
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody2D_0")
+length = 32.0
+
+[node name="DampedSpringJoint2D01" type="DampedSpringJoint2D" parent="RigidBody2D_3"]
+rotation = 0.35379
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody2D_4")
+length = 25.0
+
+[node name="RigidBody2D_4" type="RigidBody2D" parent="."]
+position = Vector2(24, 23)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D_4"]
+shape = SubResource("CircleShape2D_mp40a")
+
+[node name="DampedSpringJoint2D00" type="DampedSpringJoint2D" parent="RigidBody2D_4"]
+rotation = 2.39301
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody2D_0")
+length = 32.0
+
+[node name="DampedSpringJoint2D01" type="DampedSpringJoint2D" parent="RigidBody2D_4"]
+rotation = 1.21593
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody2D_5")
+length = 26.0
+
+[node name="RigidBody2D_5" type="RigidBody2D" parent="."]
+position = Vector2(0, 32)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D_5"]
+shape = SubResource("CircleShape2D_mp40a")
+
+[node name="DampedSpringJoint2D00" type="DampedSpringJoint2D" parent="RigidBody2D_5"]
+rotation = 3.13458
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody2D_0")
+length = 32.0
+
+[node name="DampedSpringJoint2D01" type="DampedSpringJoint2D" parent="RigidBody2D_5"]
+rotation = 1.9575
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody2D_6")
+length = 26.0
+
+[node name="RigidBody2D_6" type="RigidBody2D" parent="."]
+position = Vector2(-23, 23)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D_6"]
+shape = SubResource("CircleShape2D_mp40a")
+
+[node name="DampedSpringJoint2D00" type="DampedSpringJoint2D" parent="RigidBody2D_6"]
+rotation = -2.3498
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody2D_0")
+length = 32.0
+
+[node name="DampedSpringJoint2D01" type="DampedSpringJoint2D" parent="RigidBody2D_6"]
+rotation = -3.52688
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody2D_7")
+length = 26.0
+
+[node name="RigidBody2D_7" type="RigidBody2D" parent="."]
+position = Vector2(-32, 0)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D_7"]
+shape = SubResource("CircleShape2D_mp40a")
+
+[node name="DampedSpringJoint2D00" type="DampedSpringJoint2D" parent="RigidBody2D_7"]
+rotation = -1.599
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody2D_0")
+length = 32.0
+
+[node name="DampedSpringJoint2D01" type="DampedSpringJoint2D" parent="RigidBody2D_7"]
+rotation = -2.77608
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody2D_8")
+length = 26.0
+
+[node name="RigidBody2D_8" type="RigidBody2D" parent="."]
+position = Vector2(-23, -24)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D_8"]
+shape = SubResource("CircleShape2D_mp40a")
+
+[node name="DampedSpringJoint2D00" type="DampedSpringJoint2D" parent="RigidBody2D_8"]
+rotation = -0.773778
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody2D_0")
+length = 32.0
+
+[node name="DampedSpringJoint2D01" type="DampedSpringJoint2D" parent="RigidBody2D_8"]
+rotation = -1.95086
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody2D_1")
+length = 26.0
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+
+[node name="Bone2D_0" type="Bone2D" parent="Skeleton2D"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+
+[node name="Bone2D_1" type="Bone2D" parent="Skeleton2D"]
+position = Vector2(0, -32)
+rotation = 1.57385
+rest = Transform2D(-0.0030487, 0.999995, -0.999995, -0.0030487, 0, -32)
+
+[node name="Bone2D_2" type="Bone2D" parent="Skeleton2D"]
+position = Vector2(24, -22)
+rotation = 0.830386
+rest = Transform2D(0.674591, 0.738192, -0.738192, 0.674591, 24, -22)
+
+[node name="Bone2D_3" type="Bone2D" parent="Skeleton2D"]
+position = Vector2(32, 0)
+rotation = 1.57385
+rest = Transform2D(-0.0030487, 0.999995, -0.999995, -0.0030487, 32, 0)
+
+[node name="Bone2D_4" type="Bone2D" parent="Skeleton2D"]
+position = Vector2(24, 23)
+rotation = 2.38196
+rest = Transform2D(-0.725091, 0.688653, -0.688653, -0.725091, 24, 23)
+
+[node name="Bone2D_5" type="Bone2D" parent="Skeleton2D"]
+position = Vector2(0, 32)
+rotation = 3.13379
+scale = Vector2(1, 1)
+rest = Transform2D(-0.99997, 0.00779827, -0.00779827, -0.99997, 0, 32)
+
+[node name="Bone2D_6" type="Bone2D" parent="Skeleton2D"]
+position = Vector2(-23, 23)
+rotation = -2.3529
+rest = Transform2D(-0.704774, -0.709432, 0.709432, -0.704774, -23, 23)
+
+[node name="Bone2D_7" type="Bone2D" parent="Skeleton2D"]
+position = Vector2(-32, 0)
+rotation = -1.57153
+scale = Vector2(1, 1)
+rest = Transform2D(-0.000730026, -1, 1, -0.000730026, -32, 0)
+
+[node name="Bone2D_8" type="Bone2D" parent="Skeleton2D"]
+position = Vector2(-23, -23)
+rotation = -0.837383
+rest = Transform2D(0.669409, -0.742894, 0.742894, 0.669409, -23, -23)

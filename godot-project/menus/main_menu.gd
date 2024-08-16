@@ -6,3 +6,7 @@ func _ready() -> void:
 
 func _on_credits_pressed() -> void:
 	get_tree().change_scene_to_file("res://menus/credits.tscn")
+
+
+func _on_play_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://levels/ocean.tscn")

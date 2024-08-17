@@ -3509,3 +3509,5 @@ node_b = NodePath("../../SoftBody2D/Bone-15")
 
 [node name="Sprite2D" type="Sprite2D" parent="TheBlatController"]
 texture = ExtResource("5_fari2")
+
+[node name="Camera2D" type="Camera2D" parent="TheBlatController"]

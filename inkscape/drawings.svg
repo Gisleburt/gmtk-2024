@@ -28,12 +28,12 @@
      inkscape:document-units="mm"
      inkscape:zoom="4.1798822"
      inkscape:cx="258.61973"
-     inkscape:cy="111.12754"
-     inkscape:window-width="3440"
-     inkscape:window-height="1369"
-     inkscape:window-x="-8"
-     inkscape:window-y="1072"
-     inkscape:window-maximized="1"
+     inkscape:cy="111.00791"
+     inkscape:window-width="1718"
+     inkscape:window-height="1360"
+     inkscape:window-x="-7"
+     inkscape:window-y="1080"
+     inkscape:window-maximized="0"
      inkscape:current-layer="layer1">
     <inkscape:page
        x="0"
@@ -43,16 +43,22 @@
        id="page4"
        margin="0"
        bleed="0"
-       inkscape:label="BlatFace" />
+       inkscape:label="TheBlatFace"
+       inkscape:export-filename=".\TheBlatBody.svg"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
     <inkscape:page
        x="48.871956"
        y="0"
        width="52.916668"
        height="52.916668"
        id="page5"
-       inkscape:label="BlatBody"
+       inkscape:label="TheBlatBody"
        margin="0"
-       bleed="0" />
+       bleed="0"
+       inkscape:export-filename=".\BlatBody.svg"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
   </sodipodi:namedview>
   <defs
      id="defs1" />
@@ -240,7 +246,7 @@
        sodipodi:open="true"
        transform="rotate(90.31035)" />
     <circle
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833333;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       style="fill:#feffff;fill-opacity:1;stroke:#000000;stroke-width:1.05833333;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
        id="path5"
        cx="259.40445"
        cy="167.63788"

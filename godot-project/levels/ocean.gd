@@ -25,9 +25,12 @@ func spawn_random_ameoba() -> void:
 
 
 func _process(_delta: float) -> void:
+	# Move the spawn paths with the Blat
+	$SpawnPaths.global_position = $TheBlat.global_position
+	
 	# Check for ameoba too far away
 	for enemy in $Enemies.get_children():
-		if $TheBlat.global_position.distance_to(enemy.global_position) > 1500:
+		if $TheBlat.global_position.distance_to(enemy.global_position) > 900:
 			enemy.queue_free()
 	
 	# Spawn in new ameoba
@@ -37,11 +40,11 @@ func _process(_delta: float) -> void:
 
 func get_random_point_inside_safe_zone() -> Vector2:
 	var progress = rng.randf_range(0.0, 1.0)
-	$TheBlat/Camera2D/InsideSafeZone/PathFollow2D.progress_ratio = progress
-	return $TheBlat/Camera2D/InsideSafeZone/PathFollow2D.global_position
+	$SpawnPaths/InsideSafeZone/PathFollow2D.progress_ratio = progress
+	return $SpawnPaths/InsideSafeZone/PathFollow2D.global_position
 
 
 func get_random_point_outside_safe_zone() -> Vector2:
 	var progress = rng.randf_range(0.0, 1.0)
-	$TheBlat/Camera2D/OutsideSafeZone/PathFollow2D.progress_ratio = progress
-	return $TheBlat/Camera2D/OutsideSafeZone/PathFollow2D.global_position
+	$SpawnPaths/OutsideSafeZone/PathFollow2D.progress_ratio = progress
+	return $SpawnPaths/OutsideSafeZone/PathFollow2D.global_position

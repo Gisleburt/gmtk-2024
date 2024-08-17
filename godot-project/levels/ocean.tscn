@@ -34,22 +34,25 @@ position = Vector2(695, 416)
 
 [node name="Camera2D" type="Camera2D" parent="TheBlat"]
 
-[node name="InsideSafeZone" type="Path2D" parent="TheBlat/Camera2D"]
-curve = SubResource("Curve2D_lfrgo")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="TheBlat/Camera2D/InsideSafeZone"]
-position = Vector2(-419, -222)
-rotation = -0.0034443
-
-[node name="OutsideSafeZone" type="Path2D" parent="TheBlat/Camera2D"]
-curve = SubResource("Curve2D_e4phf")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="TheBlat/Camera2D/OutsideSafeZone"]
-position = Vector2(-651, -457)
-rotation = 0.0022779
-
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_3eqpt")
 autoplay = true
+
+[node name="SpawnPaths" type="Node2D" parent="."]
+position = Vector2(694, 419)
+
+[node name="InsideSafeZone" type="Path2D" parent="SpawnPaths"]
+curve = SubResource("Curve2D_lfrgo")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="SpawnPaths/InsideSafeZone"]
+position = Vector2(-419, -222)
+rotation = -0.0034443
+
+[node name="OutsideSafeZone" type="Path2D" parent="SpawnPaths"]
+curve = SubResource("Curve2D_e4phf")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="SpawnPaths/OutsideSafeZone"]
+position = Vector2(-651, -457)
+rotation = 0.0022779

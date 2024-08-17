@@ -28,21 +28,22 @@ collision_layer = 0
 collision_mask = 9
 
 [node name="Sprite2D" type="Sprite2D" parent="TheBlatBody"]
-position = Vector2(0, 10)
 texture = ExtResource("2_6ied8")
+offset = Vector2(0, 10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TheBlatBody"]
 shape = SubResource("CircleShape2D_sx4mj")
 
 [node name="ClosedMouth" type="Sprite2D" parent="."]
-position = Vector2(0, -19)
+position = Vector2(0, -7)
 texture = ExtResource("3_ddaht")
 
 [node name="OpenMouth" type="Sprite2D" parent="."]
-position = Vector2(0, -19)
+position = Vector2(0, -7)
 texture = ExtResource("4_sw0fy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
 shape = SubResource("CircleShape2D_uqe6v")
 
 [node name="BiteNoises" type="Node2D" parent="."]

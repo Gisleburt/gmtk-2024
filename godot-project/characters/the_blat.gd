@@ -21,7 +21,7 @@ func get_input():
 		input.y -= 1
 	return input
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var direction = get_input()
 	if direction.length() > 0:
 		velocity = velocity.lerp(direction.normalized() * speed, acceleration)
@@ -29,10 +29,14 @@ func _physics_process(_delta: float) -> void:
 		velocity = velocity.lerp(Vector2.ZERO, friction)
 	move_and_slide()
 	
-	for collision_idx in get_slide_collision_count():
-		var collider = get_slide_collision(collision_idx).get_collider()
-		if collider and collider.is_in_group("Edible"):
-			eat(collider)
+	# if else used to prevent rotate when colliding
+	if get_slide_collision_count() > 0:
+		for collision_idx in get_slide_collision_count():
+			var collider = get_slide_collision(collision_idx).get_collider()
+			if collider and collider.is_in_group("Edible"):
+				eat(collider)
+	else:
+		rotate_body(delta)
 	
 	if $TheBlatBody.has_overlapping_bodies():
 		$ClosedMouth.visible = false
@@ -40,12 +44,21 @@ func _physics_process(_delta: float) -> void:
 	else:
 		$ClosedMouth.visible = true
 		$OpenMouth.visible = false
+	
 
 
 func eat(edible) -> void:
 	eaten += edible.get_value()
-	edible.free()
+	edible.queue_free()
 	var player_idx = rng.randi_range(1, $BiteNoises.get_child_count())
 	$BiteNoises.get_child(player_idx - 1).play()
 	var scale_add: float = eaten / 10
-	get_parent().scale = Vector2(1 + scale_add, 1 + scale_add)
+	scale = Vector2(1 + scale_add, 1 + scale_add)
+
+
+func rotate_body(_delta: float) -> void:
+	var pos = $TheBlatBody/Sprite2D.global_position + get_last_motion().rotated(1.5708)
+	if pos.length() == 0:
+		pos = $TheBlatBody/Sprite2D.global_position + Vector2.UP
+	$TheBlatBody/Sprite2D.look_at(pos)
+	#$TheBlatBody/Sprite2D.rotation = lerp_angle($TheBlatBody/Sprite2D.rotation, desired, 1)

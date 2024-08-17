@@ -5,6 +5,9 @@ extends CharacterBody2D
 @export var friction = 0.01
 @export var acceleration = 0.1
 
+var rng = RandomNumberGenerator.new()
+
+var eaten: float = 0;
 
 func get_input():
 	var input = Vector2()
@@ -30,5 +33,15 @@ func _physics_process(_delta: float) -> void:
 		var collision = get_slide_collision(collision_idx)
 		if collision.get_collider():
 			var parent = collision.get_collider().get_parent()
-			if parent.is_in_group("Edible") :
-				parent.free()
+			if parent.is_in_group("Edible"):
+				eat(parent)
+
+
+func eat(edible) -> void:
+	eaten += edible.get_value()
+	print(eaten)
+	edible.free()
+	var player_idx = rng.randi_range(1, $BiteNoises.get_child_count())
+	$BiteNoises.get_child(player_idx - 1).play()
+	var scale_add: float = eaten / 100
+	get_parent().scale = Vector2(1 + scale_add, 1 + scale_add)

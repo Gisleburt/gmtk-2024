@@ -14,7 +14,6 @@ func _ready() -> void:
 func spawn_ameoba(point: Vector2) -> void:
 	var child = ameoba.instantiate()
 	child.global_position = point
-	
 	$Enemies.add_child(child)
 
 

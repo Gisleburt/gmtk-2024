@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bv1qd5upjlm5l"]
+[gd_scene load_steps=5 format=3 uid="uid://bv1qd5upjlm5l"]
 
 [ext_resource type="Script" path="res://levels/ocean.gd" id="1_d1cdu"]
 [ext_resource type="PackedScene" uid="uid://to86pewsgyji" path="res://characters/the_blat.tscn" id="1_j3vx4"]
 [ext_resource type="Texture2D" uid="uid://cv7x1ui852t0d" path="res://assets/OceanBackground.svg" id="3_6nveh"]
+[ext_resource type="AudioStream" uid="uid://naub5gpe7wso" path="res://assets/music/Ethereal - Becoming Loop.mp3" id="4_3eqpt"]
 
 [node name="Ocean" type="Node2D"]
 script = ExtResource("1_d1cdu")
@@ -20,3 +21,7 @@ centered = false
 position = Vector2(294, 250)
 
 [node name="Enemies" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_3eqpt")
+autoplay = true

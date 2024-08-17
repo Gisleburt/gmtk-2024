@@ -31,5 +31,4 @@ texture = ExtResource("2_3voju")
 shape = SubResource("CircleShape2D_lfdov")
 
 [node name="TheBlat" parent="." instance=ExtResource("1_j3vx4")]
-position = Vector2(273, 207)
-scale = Vector2(3.35665, 3.35665)
+position = Vector2(294, 250)

@@ -49,6 +49,7 @@ func _physics_process(delta: float) -> void:
 
 func eat(edible) -> void:
 	eaten += edible.get_value()
+	print(eaten)
 	edible.queue_free()
 	var player_idx = rng.randi_range(1, $BiteNoises.get_child_count())
 	$BiteNoises.get_child(player_idx - 1).play()
@@ -62,3 +63,7 @@ func rotate_body(_delta: float) -> void:
 		pos = $TheBlatBody/Sprite2D.global_position + Vector2.UP
 	$TheBlatBody/Sprite2D.look_at(pos)
 	#$TheBlatBody/Sprite2D.rotation = lerp_angle($TheBlatBody/Sprite2D.rotation, desired, 1)
+
+
+func get_eaten() -> int:
+	return eaten

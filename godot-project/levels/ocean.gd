@@ -2,8 +2,9 @@ extends Node2D
 
 @export var ameoba: PackedScene = preload("res://characters/amoeba.tscn")
 
-@export var initial_enemies: int = 5;
-@export var max_enemies: int = 20;
+@export var initial_enemies: int = 5
+@export var max_enemies: int = 20
+@export var eaten_goal = 35
 
 var rng = RandomNumberGenerator.new()
 
@@ -36,6 +37,10 @@ func _process(_delta: float) -> void:
 	# Spawn in new ameoba
 	if $Enemies.get_child_count() < max_enemies:
 		spawn_random_ameoba()
+	
+	# check win condition
+	if $TheBlat.get_eaten() >= eaten_goal:
+		get_tree().change_scene_to_file("res://menus/to_do.tscn")
 
 
 func get_random_point_inside_safe_zone() -> Vector2:

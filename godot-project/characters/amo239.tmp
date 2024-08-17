@@ -4,13 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://c7aw6tf8m6bix" path="res://assets/AmeobaBody.svg" id="1_u3x62"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nc3a3"]
-radius = 19.0263
+radius = 24.0
 
-[node name="RigidBody2D" type="RigidBody2D" groups=["Edible"]]
+[node name="RigidBody2D" type="RigidBody2D"]
 collision_layer = 8
 collision_mask = 9
 gravity_scale = 0.0
 script = ExtResource("1_ttw3d")
+initial_speed_min = null
+initial_speed_max = null
+edible_value = null
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+position = Vector2(36, 35)
+node_a = NodePath("..")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 3)

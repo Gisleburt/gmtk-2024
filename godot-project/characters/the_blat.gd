@@ -1,20 +1,51 @@
-extends Node2D
+extends CharacterBody2D
 
-@export var play_range: float = 1_250.0
+
+@export var speed = 200
+@export var friction = 0.01
+@export var acceleration = 0.1
 
 var rng = RandomNumberGenerator.new()
 
-func get_random_point_inside_safe_zone() -> Vector2:
-	var progress = rng.randf_range(0.0, 1.0)
-	$TheBlatController/Camera2D/InsideSafeZone/PathFollow2D.progress_ratio = progress
-	return $TheBlatController/Camera2D/InsideSafeZone/PathFollow2D.global_position
+var eaten: float = 0;
+
+func get_input():
+	var input = Vector2()
+	if Input.is_action_pressed('right'):
+		input.x += 1
+	if Input.is_action_pressed('left'):
+		input.x -= 1
+	if Input.is_action_pressed('down'):
+		input.y += 1
+	if Input.is_action_pressed('up'):
+		input.y -= 1
+	return input
+
+func _physics_process(_delta: float) -> void:
+	var direction = get_input()
+	if direction.length() > 0:
+		velocity = velocity.lerp(direction.normalized() * speed, acceleration)
+	else:
+		velocity = velocity.lerp(Vector2.ZERO, friction)
+	move_and_slide()
+	
+	for collision_idx in get_slide_collision_count():
+		var collider = get_slide_collision(collision_idx).get_collider()
+		if collider and collider.is_in_group("Edible"):
+			eat(collider)
+	
+	if $TheBlatBody.has_overlapping_bodies():
+		$ClosedMouth.visible = false
+		$OpenMouth.visible = true
+	else:
+		$ClosedMouth.visible = true
+		$OpenMouth.visible = false
 
 
-func get_random_point_outside_safe_zone() -> Vector2:
-	var progress = rng.randf_range(0.0, 1.0)
-	$TheBlatController/Camera2D/OutsideSafeZone/PathFollow2D.progress_ratio = progress
-	return $TheBlatController/Camera2D/OutsideSafeZone/PathFollow2D.global_position
-
-
-func is_out_of_play_range(check_pos: Vector2) -> bool:
-	return $TheBlatController.global_position.distance_to(check_pos) > play_range
+func eat(edible) -> void:
+	eaten += edible.get_value()
+	edible.free()
+	var player_idx = rng.randi_range(1, $BiteNoises.get_child_count())
+	$BiteNoises.get_child(player_idx - 1).play()
+	var scale_add: float = eaten / 10
+	get_parent().scale = Vector2(1 + scale_add, 1 + scale_add)

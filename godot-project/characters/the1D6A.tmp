@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=3 uid="uid://2v0uruh0ty4k"]
 
 [ext_resource type="Script" path="res://characters/the_blat.gd" id="1_8yex1"]
-[ext_resource type="Texture2D" uid="uid://de3la243qsqki" path="res://assets/TheBlatBody.svg" id="2_6ied8"]
-[ext_resource type="Texture2D" uid="uid://dwkivdx6hng5n" path="res://assets/TheBlatFaceClosed.svg" id="3_ddaht"]
-[ext_resource type="Texture2D" uid="uid://cu0dn83267xbb" path="res://assets/TheBlatFaceOpen.svg" id="4_sw0fy"]
+[ext_resource type="Texture2D" uid="uid://de3la243qsqki" path="res://assets/TheBlatBody2.svg" id="2_6ied8"]
+[ext_resource type="Texture2D" uid="uid://dwkivdx6hng5n" path="res://assets/TheBlatFace2Closed.svg" id="3_ddaht"]
+[ext_resource type="Texture2D" uid="uid://cu0dn83267xbb" path="res://assets/TheBlatFace2Open.svg" id="4_sw0fy"]
 [ext_resource type="AudioStream" uid="uid://b6g5tnjugwebu" path="res://assets/sfx/bite/01.wav" id="6_4qlfn"]
 [ext_resource type="AudioStream" uid="uid://c8tgs7o4yxreo" path="res://assets/sfx/bite/02.wav" id="7_m3y0x"]
 [ext_resource type="AudioStream" uid="uid://buv20stcl41v1" path="res://assets/sfx/bite/03.wav" id="8_j1eau"]
@@ -22,10 +22,12 @@ collision_layer = 2
 collision_mask = 9
 motion_mode = 1
 script = ExtResource("1_8yex1")
+speed = null
+friction = null
+acceleration = null
 
 [node name="TheBlatBody" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 9
+collision_layer = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="TheBlatBody"]
 position = Vector2(0, 10)
@@ -35,14 +37,15 @@ texture = ExtResource("2_6ied8")
 shape = SubResource("CircleShape2D_sx4mj")
 
 [node name="ClosedMouth" type="Sprite2D" parent="."]
-position = Vector2(0, -19)
+position = Vector2(0, -13)
 texture = ExtResource("3_ddaht")
 
 [node name="OpenMouth" type="Sprite2D" parent="."]
-position = Vector2(0, -19)
+position = Vector2(0, -13)
 texture = ExtResource("4_sw0fy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
 shape = SubResource("CircleShape2D_uqe6v")
 
 [node name="BiteNoises" type="Node2D" parent="."]

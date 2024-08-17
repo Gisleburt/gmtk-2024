@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://levels/ocean.gd" id="1_d1cdu"]
 [ext_resource type="Texture2D" uid="uid://cv7x1ui852t0d" path="res://assets/OceanBackground.svg" id="3_6nveh"]
 [ext_resource type="AudioStream" uid="uid://naub5gpe7wso" path="res://assets/music/Ethereal - Becoming Loop.mp3" id="4_3eqpt"]
-[ext_resource type="PackedScene" uid="uid://2v0uruh0ty4k" path="res://characters/the_blat.tscn" id="4_pgvlv"]
+[ext_resource type="PackedScene" uid="uid://2v0uruh0ty4k" path="res://characters/the_blat_2.tscn" id="4_pgvlv"]
 
 [sub_resource type="Curve2D" id="Curve2D_lfrgo"]
 _data = {
@@ -29,8 +29,17 @@ motion_mirroring = Vector2(1200, 720)
 texture = ExtResource("3_6nveh")
 centered = false
 
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_3eqpt")
+autoplay = true
+
 [node name="TheBlat" parent="." instance=ExtResource("4_pgvlv")]
 position = Vector2(695, 416)
+speed = 200
+friction = 0.01
+acceleration = 0.1
 
 [node name="Camera2D" type="Camera2D" parent="TheBlat"]
 
@@ -47,9 +56,3 @@ curve = SubResource("Curve2D_e4phf")
 [node name="PathFollow2D" type="PathFollow2D" parent="TheBlat/Camera2D/OutsideSafeZone"]
 position = Vector2(-651, -457)
 rotation = 0.0022779
-
-[node name="Enemies" type="Node2D" parent="."]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_3eqpt")
-autoplay = true

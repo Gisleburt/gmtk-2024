@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxx5v7b42j4kf"
-path="res://.godot/imported/softbody2d.svg-10ab834be780722c00cf50ffddb981c8.ctex"
+uid="uid://cu0dn83267xbb"
+path="res://.godot/imported/TheBlatFaceOpen.svg-1542ad5abcbb8911cc0ad3376a540c5f.ctex"
 metadata={
-"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/softbody2d/softbody2d.svg"
-dest_files=["res://.godot/imported/softbody2d.svg-10ab834be780722c00cf50ffddb981c8.ctex"]
+source_file="res://assets/TheBlatFaceOpen.svg"
+dest_files=["res://.godot/imported/TheBlatFaceOpen.svg-1542ad5abcbb8911cc0ad3376a540c5f.ctex"]
 
 [params]
 
@@ -33,6 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=10.0
-editor/scale_with_editor_scale=true
+svg/scale=1.0
+editor/scale_with_editor_scale=false
 editor/convert_colors_with_editor_theme=false

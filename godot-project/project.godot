@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="The Blat"
-config/version="0.2.0"
+config/version="0.2.1"
 run/main_scene="res://menus/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -21,10 +21,6 @@ config/icon="res://icon.svg"
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/version="0.1.7"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/softbody2d/plugin.cfg")
 
 [global_group]
 
@@ -65,7 +61,7 @@ right={
 
 2d_physics/layer_1="World"
 2d_physics/layer_2="PlayerController"
-2d_physics/layer_3="TheBlat"
+2d_physics/layer_3="TheBlatBody"
 2d_physics/layer_4="Edibles"
 2d_physics/layer_5="Enemies"
 

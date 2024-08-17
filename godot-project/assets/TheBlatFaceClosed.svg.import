@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6ld04egjmmr2"
-path="res://.godot/imported/voronoi_icon.png-2535410cd471b1c819b10e29f605ac2f.ctex"
+uid="uid://dwkivdx6hng5n"
+path="res://.godot/imported/TheBlatFaceClosed.svg-e75a486d81f5695d11ef841d769de9e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/softbody2d/voronoi_icon.png"
-dest_files=["res://.godot/imported/voronoi_icon.png-2535410cd471b1c819b10e29f605ac2f.ctex"]
+source_file="res://assets/TheBlatFaceClosed.svg"
+dest_files=["res://.godot/imported/TheBlatFaceClosed.svg-e75a486d81f5695d11ef841d769de9e3.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

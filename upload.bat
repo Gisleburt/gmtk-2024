@@ -21,9 +21,6 @@ if %found_tag% == 1 (
     exit 1
 )
 
-git tag %tag%
-git push origin tag %tag%
-
 ::Check that Git repo is clean
 set /A found_files = 0
 for /f %%a in ('git status --porcelain') do set /A found_files=1
@@ -32,6 +29,10 @@ if %found_files% == 1 (
     echo Commit all files and try again.
     exit 1
 )
+
+::Tag and push Tag
+git tag %tag%
+git push origin tag %tag%
 
 ::Delete old files and recreate directories
 if exist export\html rmdir /S /Q export\html

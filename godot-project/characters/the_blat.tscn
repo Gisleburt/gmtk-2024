@@ -1,4 +1,4 @@
-[gd_scene load_steps=278 format=3 uid="uid://to86pewsgyji"]
+[gd_scene load_steps=280 format=3 uid="uid://to86pewsgyji"]
 
 [ext_resource type="Script" path="res://characters/the_blat.gd" id="1_u2vo1"]
 [ext_resource type="Texture2D" uid="uid://bp3sh5603bwmk" path="res://assets/TheBlatBody.svg" id="2_bcncb"]
@@ -1632,7 +1632,19 @@ resource_local_to_scene = true
 radius = 7.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wsf3n"]
-radius = 4.12311
+radius = 8.0
+
+[sub_resource type="Curve2D" id="Curve2D_07g52"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -419, -222, 0, 0, 0, 0, 452, -225, 0, 0, 0, 0, 452, 192, 0, 0, 0, 0, -419, 191, 0, 0, 0, 0, -419, -222)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_qp8hw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -651, -457, 0, 0, 0, 0, 666, -454, 0, 0, 0, 0, 662, 391, 0, 0, 0, 0, -649, 394, 0, 0, 0, 0, -651, -457)
+}
+point_count = 5
 
 [node name="TheBlat" type="Node2D"]
 script = ExtResource("1_u2vo1")
@@ -12529,7 +12541,6 @@ node_b = NodePath("../../Bone-133")
 softness = 60.0
 
 [node name="TheBlatController" type="CharacterBody2D" parent="."]
-position = Vector2(-1, 0)
 collision_layer = 2
 collision_mask = 11
 script = ExtResource("4_d02sa")
@@ -12546,3 +12557,17 @@ node_b = NodePath("../../SoftBody2D/Bone-75")
 texture = ExtResource("5_fari2")
 
 [node name="Camera2D" type="Camera2D" parent="TheBlatController"]
+
+[node name="InsideSafeZone" type="Path2D" parent="TheBlatController/Camera2D"]
+curve = SubResource("Curve2D_07g52")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="TheBlatController/Camera2D/InsideSafeZone"]
+position = Vector2(-419, -222)
+rotation = -0.0034443
+
+[node name="OutsideSafeZone" type="Path2D" parent="TheBlatController/Camera2D"]
+curve = SubResource("Curve2D_qp8hw")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="TheBlatController/Camera2D/OutsideSafeZone"]
+position = Vector2(-651, -457)
+rotation = 0.0022779

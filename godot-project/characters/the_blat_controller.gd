@@ -18,8 +18,7 @@ func get_input():
 		input.y -= 1
 	return input
 
-
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var direction = get_input()
 	if direction.length() > 0:
 		velocity = velocity.lerp(direction.normalized() * speed, acceleration)
@@ -29,5 +28,7 @@ func _physics_process(delta: float) -> void:
 	
 	for collision_idx in get_slide_collision_count():
 		var collision = get_slide_collision(collision_idx)
-		if collision.get_collider() is StaticBody2D:
-			collision.get_collider().free()
+		if collision.get_collider():
+			var parent = collision.get_collider().get_parent()
+			if parent.is_in_group("Edible") :
+				parent.free()

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="396.875mm"
+   height="396.875mm"
+   viewBox="0 0 396.875 396.875"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="TheBlatFace.svg"
+   inkscape:export-xdpi="95.999992"
+   inkscape:export-ydpi="95.999992"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="drawings.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.4778115"
+     inkscape:cx="2146.4171"
+     inkscape:cy="1908.9038"
+     inkscape:window-width="1718"
+     inkscape:window-height="1360"
+     inkscape:window-x="0"
+     inkscape:window-y="1080"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="396.875"
+       height="396.875"
+       id="page45"
+       margin="0"
+       bleed="0"
+       inkscape:label="Rings"
+       inkscape:export-filename="..\godot-project\assets\backgrounds\Rings.svg"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-573.99743,-425.51968)">
+    <circle
+       style="fill:none;fill-opacity:0.25;stroke:#ffffff;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:0.25"
+       id="path46"
+       cx="772.43494"
+       cy="623.95715"
+       r="158.2226" />
+    <ellipse
+       style="fill:none;fill-opacity:0.25;stroke:#ffffff;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:0.25"
+       id="path46-7-6"
+       cx="772.43494"
+       cy="623.95715"
+       rx="20.90449"
+       ry="20.904488" />
+    <ellipse
+       style="fill:none;fill-opacity:0.25;stroke:#ffffff;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:0.25"
+       id="ellipse46"
+       cx="772.43494"
+       cy="623.95715"
+       rx="28.839245"
+       ry="28.839243" />
+    <circle
+       style="fill:none;fill-opacity:0.25;stroke:#ffffff;stroke-width:0.236009;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:0.25"
+       id="ellipse47"
+       cx="772.43494"
+       cy="623.95715"
+       r="42.215328" />
+    <ellipse
+       style="fill:none;fill-opacity:0.25;stroke:#ffffff;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:0.25"
+       id="ellipse48"
+       cx="772.43494"
+       cy="623.95715"
+       rx="59.343887"
+       ry="59.343884" />
+    <ellipse
+       style="fill:none;fill-opacity:0.25;stroke:#ffffff;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:0.25"
+       id="ellipse49"
+       cx="772.43494"
+       cy="623.95715"
+       rx="89.414009"
+       ry="89.414001" />
+    <ellipse
+       style="fill:none;fill-opacity:0.25;stroke:#ffffff;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:0.25"
+       id="ellipse50"
+       cx="772.43494"
+       cy="623.95715"
+       rx="115.97588"
+       ry="115.97587" />
+    <ellipse
+       style="fill:none;fill-opacity:0.25;stroke:#ffffff;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:0.25"
+       id="ellipse51"
+       cx="772.43494"
+       cy="623.95715"
+       rx="134.46837"
+       ry="134.46835" />
+  </g>
+</svg>

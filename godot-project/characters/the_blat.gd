@@ -21,6 +21,7 @@ func get_input():
 		input.y -= 1
 	return input
 
+
 func _physics_process(delta: float) -> void:
 	var direction = get_input()
 	if direction.length() > 0:
@@ -38,18 +39,13 @@ func _physics_process(delta: float) -> void:
 	else:
 		rotate_body(delta)
 	
-	if $TheBlatBody.has_overlapping_bodies():
-		$ClosedMouth.visible = false
-		$OpenMouth.visible = true
-	else:
-		$ClosedMouth.visible = true
-		$OpenMouth.visible = false
+	# Mouth Open or Closed
+	$OpenMouth.visible = $TheBlatBody.has_overlapping_bodies()
+	$ClosedMouth.visible = !$TheBlatBody.has_overlapping_bodies()
 	
-
 
 func eat(edible) -> void:
 	eaten += edible.get_value()
-	print(eaten)
 	edible.queue_free()
 	var player_idx = rng.randi_range(1, $BiteNoises.get_child_count())
 	$BiteNoises.get_child(player_idx - 1).play()
@@ -65,5 +61,5 @@ func rotate_body(_delta: float) -> void:
 	#$TheBlatBody/Sprite2D.rotation = lerp_angle($TheBlatBody/Sprite2D.rotation, desired, 1)
 
 
-func get_eaten() -> int:
+func get_num_eaten() -> int:
 	return eaten

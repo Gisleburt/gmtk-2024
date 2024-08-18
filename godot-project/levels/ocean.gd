@@ -39,8 +39,8 @@ func _process(_delta: float) -> void:
 		spawn_random_ameoba()
 	
 	# check win condition
-	if $TheBlat.get_eaten() >= eaten_goal:
-		get_tree().change_scene_to_file("res://menus/to_do.tscn")
+	if $TheBlat.get_num_eaten() >= eaten_goal:
+		get_tree().change_scene_to_file("res://levels/stellar.tscn")
 
 
 func get_random_point_inside_safe_zone() -> Vector2:

@@ -141,17 +141,17 @@ layout_mode = 2
 size_flags_horizontal = 7
 columns = 2
 
-[node name="SoftBody2DLink" type="LinkButton" parent="AssetAuthors/HBoxContainer/GridContainer2"]
+[node name="PlanetsAndMoons" type="LinkButton" parent="AssetAuthors/HBoxContainer/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 10
-text = "SoftBody2D"
-uri = "https://github.com/appsinacup/godot-softbody2d"
+text = "Spinning Planets"
+uri = "https://helianthus-games.itch.io/"
 
-[node name="DragosDaianLink" type="LinkButton" parent="AssetAuthors/HBoxContainer/GridContainer2"]
+[node name="HelianthusGamesLink" type="LinkButton" parent="AssetAuthors/HBoxContainer/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "Dragos Daian"
-uri = "https://www.linkedin.com/in/dragos-daian-aa29b7a7/"
+text = "🌻Helianthus Games🌻"
+uri = "https://helianthus-games.itch.io/"
 
 [node name="GridContainer3" type="GridContainer" parent="AssetAuthors/HBoxContainer"]
 layout_mode = 2

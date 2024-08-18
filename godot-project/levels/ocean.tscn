@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bv1qd5upjlm5l"]
 
 [ext_resource type="Script" path="res://levels/ocean.gd" id="1_d1cdu"]
-[ext_resource type="Texture2D" uid="uid://cv7x1ui852t0d" path="res://assets/OceanBackground.svg" id="3_6nveh"]
+[ext_resource type="Texture2D" uid="uid://cv7x1ui852t0d" path="res://assets/backgrounds/OceanBackground.svg" id="3_6nveh"]
 [ext_resource type="AudioStream" uid="uid://naub5gpe7wso" path="res://assets/music/Ethereal - Becoming Loop.mp3" id="4_3eqpt"]
 [ext_resource type="PackedScene" uid="uid://2v0uruh0ty4k" path="res://characters/the_blat.tscn" id="4_pgvlv"]
 

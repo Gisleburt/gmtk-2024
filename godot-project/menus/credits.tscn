@@ -82,15 +82,13 @@ uri = "https://www.linkedin.com/in/danieljamesmason/"
 
 [node name="AssetAuthors" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -5.0
-offset_bottom = 103.0
+anchor_bottom = 1.0
+offset_top = -326.0
 grow_horizontal = 2
-grow_vertical = 2
-alignment = 1
+grow_vertical = 0
 
 [node name="ContributorsLabel" type="Label" parent="AssetAuthors"]
 layout_mode = 2
@@ -136,22 +134,29 @@ size_flags_horizontal = 3
 text = "Adam Yeo"
 uri = "https://www.linkedin.com/in/adam-yeo/"
 
-[node name="GridContainer2" type="GridContainer" parent="AssetAuthors/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 7
-columns = 2
-
-[node name="PlanetsAndMoons" type="LinkButton" parent="AssetAuthors/HBoxContainer/GridContainer2"]
+[node name="PlanetsAndMoons" type="LinkButton" parent="AssetAuthors/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 10
 text = "Spinning Planets"
 uri = "https://helianthus-games.itch.io/"
 
-[node name="HelianthusGamesLink" type="LinkButton" parent="AssetAuthors/HBoxContainer/GridContainer2"]
+[node name="HelianthusGamesLink" type="LinkButton" parent="AssetAuthors/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "🌻Helianthus Games🌻"
 uri = "https://helianthus-games.itch.io/"
+
+[node name="RpgUrbanPack" type="LinkButton" parent="AssetAuthors/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "RPG Urban Pack"
+uri = "https://kenney.nl/assets/rpg-urban-pack"
+
+[node name="Kenney" type="LinkButton" parent="AssetAuthors/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Kenney"
+uri = "https://kenney.nl/"
 
 [node name="GridContainer3" type="GridContainer" parent="AssetAuthors/HBoxContainer"]
 layout_mode = 2
@@ -168,5 +173,17 @@ uri = "https://fonts.google.com/specimen/Matemasie"
 layout_mode = 2
 size_flags_horizontal = 3
 text = "?"
+
+[node name="Music" type="LinkButton" parent="AssetAuthors/HBoxContainer/GridContainer3"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Music"
+uri = "https://ineedmusic.co/"
+
+[node name="INeedMusic" type="LinkButton" parent="AssetAuthors/HBoxContainer/GridContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ineedmusic.co"
+uri = "https://ineedmusic.co/"
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

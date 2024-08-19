@@ -1,0 +1,66 @@
+[gd_scene load_steps=13 format=3 uid="uid://dq3ydytbwu045"]
+
+[ext_resource type="Script" path="res://characters/the_blat_city.gd" id="1_4g4er"]
+[ext_resource type="Texture2D" uid="uid://de3la243qsqki" path="res://assets/TheBlatBody.svg" id="2_jw6f8"]
+[ext_resource type="Texture2D" uid="uid://dwkivdx6hng5n" path="res://assets/TheBlatFaceClosed.svg" id="3_r5wcf"]
+[ext_resource type="Texture2D" uid="uid://cu0dn83267xbb" path="res://assets/TheBlatFaceOpen.svg" id="4_08rc4"]
+[ext_resource type="AudioStream" uid="uid://b6g5tnjugwebu" path="res://assets/sfx/bite/01.wav" id="5_ju6nc"]
+[ext_resource type="AudioStream" uid="uid://c8tgs7o4yxreo" path="res://assets/sfx/bite/02.wav" id="6_822df"]
+[ext_resource type="AudioStream" uid="uid://buv20stcl41v1" path="res://assets/sfx/bite/03.wav" id="7_1g3lf"]
+[ext_resource type="AudioStream" uid="uid://btd21a463qp0w" path="res://assets/sfx/bite/04.wav" id="8_2fxqm"]
+[ext_resource type="AudioStream" uid="uid://b7syp8yij7kt0" path="res://assets/sfx/bite/05.wav" id="9_2gjmh"]
+[ext_resource type="AudioStream" uid="uid://dqv2qc6su7dia" path="res://assets/sfx/bite/06.wav" id="10_ke7sk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sx4mj"]
+radius = 68.2642
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uqe6v"]
+radius = 28.2843
+
+[node name="TheBlat" type="CharacterBody2D"]
+position = Vector2(-1, 0)
+collision_layer = 0
+collision_mask = 9
+script = ExtResource("1_4g4er")
+
+[node name="TheBlatBody" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="TheBlatBody"]
+texture = ExtResource("2_jw6f8")
+offset = Vector2(0, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TheBlatBody"]
+shape = SubResource("CircleShape2D_sx4mj")
+
+[node name="ClosedMouth" type="Sprite2D" parent="."]
+position = Vector2(0, -7)
+texture = ExtResource("3_r5wcf")
+
+[node name="OpenMouth" type="Sprite2D" parent="."]
+position = Vector2(0, -7)
+texture = ExtResource("4_08rc4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_uqe6v")
+
+[node name="BiteNoises" type="Node2D" parent="."]
+
+[node name="Bite01" type="AudioStreamPlayer2D" parent="BiteNoises"]
+stream = ExtResource("5_ju6nc")
+
+[node name="Bite02" type="AudioStreamPlayer2D" parent="BiteNoises"]
+stream = ExtResource("6_822df")
+
+[node name="Bite03" type="AudioStreamPlayer2D" parent="BiteNoises"]
+stream = ExtResource("7_1g3lf")
+
+[node name="Bite04" type="AudioStreamPlayer2D" parent="BiteNoises"]
+stream = ExtResource("8_2fxqm")
+
+[node name="Bite05" type="AudioStreamPlayer2D" parent="BiteNoises"]
+stream = ExtResource("9_2gjmh")
+
+[node name="Bite06" type="AudioStreamPlayer2D" parent="BiteNoises"]
+stream = ExtResource("10_ke7sk")

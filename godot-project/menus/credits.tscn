@@ -163,16 +163,15 @@ layout_mode = 2
 size_flags_horizontal = 7
 columns = 2
 
-[node name="ComicalCuteCharacterEatingLink" type="LinkButton" parent="AssetAuthors/HBoxContainer/GridContainer3"]
+[node name="ComicalCuteCharacterEatingLink" type="Label" parent="AssetAuthors/HBoxContainer/GridContainer3"]
 layout_mode = 2
 size_flags_horizontal = 10
 text = "Comical Cute Character Eating 3"
-uri = "https://fonts.google.com/specimen/Matemasie"
 
-[node name="UnknownAuthorLink" type="LinkButton" parent="AssetAuthors/HBoxContainer/GridContainer3"]
+[node name="UnknownAuthorLink" type="Label" parent="AssetAuthors/HBoxContainer/GridContainer3"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "?"
+text = "Apple Hill Studio"
 
 [node name="Music" type="LinkButton" parent="AssetAuthors/HBoxContainer/GridContainer3"]
 layout_mode = 2

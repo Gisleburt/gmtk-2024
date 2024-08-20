@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal ate_person
+signal ate_building
 
 @export var speed: float = 200
 @export var friction: float = 0.01
@@ -7,6 +9,7 @@ extends CharacterBody2D
 @export var gravity: float = 100
 
 var rng = RandomNumberGenerator.new()
+
 
 func get_input():
 	var input = Vector2()
@@ -37,7 +40,14 @@ func _physics_process(delta: float) -> void:
 	# Mouth Open or Closed
 	$OpenMouth.visible = $TheBlatBody.has_overlapping_bodies()
 	$ClosedMouth.visible = !$TheBlatBody.has_overlapping_bodies()
-	
 
-func eat(edible) -> void:
-	pass
+
+func eat(edible: Node2D) -> void:
+	var player_idx = rng.randi_range(1, $BiteNoises.get_child_count())
+	$BiteNoises.get_child(player_idx - 1).play()
+	
+	if edible.is_in_group("Person"):
+		ate_person.emit()
+	if edible.is_in_group("BuildingLarge") ||  edible.is_in_group("BuildingMedium") ||  edible.is_in_group("BuildingSmall"):
+		ate_building.emit()
+	edible.queue_free()

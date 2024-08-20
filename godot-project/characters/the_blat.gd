@@ -45,7 +45,7 @@ func _physics_process(delta: float) -> void:
 	
 
 func eat(edible) -> void:
-	eaten += edible.getdd_value()
+	eaten += edible.get_value()
 	edible.queue_free()
 	var player_idx = rng.randi_range(1, $BiteNoises.get_child_count())
 	$BiteNoises.get_child(player_idx - 1).play()

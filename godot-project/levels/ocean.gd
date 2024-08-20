@@ -40,7 +40,7 @@ func _process(_delta: float) -> void:
 	
 	# check win condition
 	if $TheBlat.get_num_eaten() >= eaten_goal:
-		get_tree().change_scene_to_file("res://levels/stellar.tscn")
+		get_tree().change_scene_to_file("res://levels/city.tscn")
 
 
 func get_random_point_inside_safe_zone() -> Vector2:

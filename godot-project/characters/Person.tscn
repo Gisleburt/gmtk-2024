@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://buitslbq5vygi"]
+[gd_scene load_steps=47 format=3 uid="uid://buitslbq5vygi"]
 
 [ext_resource type="Script" path="res://characters/person.gd" id="1_bai3b"]
 [ext_resource type="Texture2D" uid="uid://cchnwcg3x4pr0" path="res://external_assets/kenney_rpg-urban-pack/Tilemap/tilemap_packed.png" id="2_86fqp"]
@@ -373,7 +373,12 @@ animations = [{
 radius = 4.0
 height = 14.0
 
-[node name="Person" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_okbpd"]
+radius = 1.0
+
+[node name="Person" type="StaticBody2D" groups=["Edible", "Person"]]
+collision_layer = 8
+collision_mask = 0
 script = ExtResource("1_bai3b")
 
 [node name="People" type="Node2D" parent="."]
@@ -411,3 +416,19 @@ animation = &"Right"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -7)
 shape = SubResource("CapsuleShape2D_0bmmr")
+
+[node name="Left" type="Area2D" parent="."]
+collision_layer = 65
+collision_mask = 65
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
+position = Vector2(-9, -8)
+shape = SubResource("CircleShape2D_okbpd")
+
+[node name="Right" type="Area2D" parent="."]
+collision_layer = 65
+collision_mask = 65
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Right"]
+position = Vector2(9, -8)
+shape = SubResource("CircleShape2D_okbpd")

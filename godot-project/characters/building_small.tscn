@@ -498,7 +498,9 @@ texture = ExtResource("1_5rgyo")
 [sub_resource type="TileSet" id="TileSet_56hvc"]
 sources/0 = SubResource("TileSetAtlasSource_g637n")
 
-[node name="SmallBuilding" type="StaticBody2D" groups=["Edible"]]
+[node name="SmallBuilding" type="StaticBody2D" groups=["BuildingSmall", "Edible"]]
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_y42i2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -511,18 +513,22 @@ position = Vector2(-24, -16)
 [node name="One" type="TileMapLayer" parent="Buildings"]
 tile_map_data = PackedByteArray("AAAAAP7/AAARAAAAAAABAP7/AAASAAAAAAAAAAAAAAARAAMAAAAAAP//AAARAAIAAAABAP//AAASAAIAAAABAAAAAAAVAAMAAAACAP//AAATAAIAAAACAAAAAAATAAMAAAACAP7/AAATAAAAAAABAP3/AAAJAAUAAAACAP3/AAAKAAUAAAAAAP3/AAAIAAUAAAAAAPz/AAAIAAMAAAABAPz/AAAJAAMAAAACAPz/AAAKAAMAAAA=")
 tile_set = SubResource("TileSet_56hvc")
+collision_enabled = false
 
 [node name="Two" type="TileMapLayer" parent="Buildings"]
 visible = false
 tile_map_data = PackedByteArray("AAAAAP7/AAARAAQAAAABAP7/AAASAAQAAAAAAAAAAAARAAcAAAAAAP//AAARAAYAAAABAP//AAASAAYAAAABAAAAAAASAAcAAAACAP//AAATAAYAAAACAAAAAAATAAcAAAACAP7/AAATAAQAAAABAP3/AAABAAUAAAACAP3/AAACAAUAAAAAAP3/AAAAAAUAAAAAAPz/AAAAAAMAAAABAPz/AAABAAMAAAACAPz/AAACAAMAAAA=")
 tile_set = SubResource("TileSet_56hvc")
+collision_enabled = false
 
 [node name="Three" type="TileMapLayer" parent="Buildings"]
 visible = false
 tile_map_data = PackedByteArray("AAAAAP7/AAARAAAAAAABAP7/AAASAAAAAAAAAAAAAAARAAMAAAAAAP//AAARAAIAAAABAP//AAASAAIAAAABAAAAAAAVAAMAAAACAP//AAATAAIAAAACAAAAAAATAAMAAAACAP7/AAATAAAAAAABAP3/AAABAAUAAAACAP3/AAACAAUAAAAAAP3/AAAAAAUAAAAAAPz/AAAAAAMAAAABAPz/AAABAAMAAAACAPz/AAACAAMAAAA=")
 tile_set = SubResource("TileSet_56hvc")
+collision_enabled = false
 
 [node name="Four" type="TileMapLayer" parent="Buildings"]
 visible = false
 tile_map_data = PackedByteArray("AAAAAP7/AAARAAQAAAABAP7/AAASAAQAAAAAAAAAAAARAAcAAAAAAP//AAARAAYAAAABAP//AAASAAYAAAABAAAAAAASAAcAAAACAP//AAATAAYAAAACAAAAAAATAAcAAAACAP7/AAATAAQAAAABAP3/AAAJAAUAAAACAP3/AAAKAAUAAAAAAP3/AAAIAAUAAAAAAPz/AAAIAAMAAAABAPz/AAAJAAMAAAACAPz/AAAKAAMAAAA=")
 tile_set = SubResource("TileSet_56hvc")
+collision_enabled = false

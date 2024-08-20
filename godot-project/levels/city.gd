@@ -44,7 +44,7 @@ func check_phase():
 					person.set_collision_layer_value(4, false)
 				for building: Building in get_tree().get_nodes_in_group("BuildingSmall"):
 					building.set_collision_layer_value(4, true)
-				move_child($TheBlatCity, 0)
+				move_child($TheBlatCity, 1)
 		Phase.Small:
 			if get_tree().get_nodes_in_group("BuildingSmall").size() <= 0:
 				phase = Phase.Medium

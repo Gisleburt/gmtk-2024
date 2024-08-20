@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=4 uid="uid://b3qximrwt663w"]
+[gd_scene load_steps=14 format=4 uid="uid://b3qximrwt663w"]
 
 [ext_resource type="Texture2D" uid="uid://cchnwcg3x4pr0" path="res://external_assets/kenney_rpg-urban-pack/Tilemap/tilemap_packed.png" id="1_6lta0"]
 [ext_resource type="Script" path="res://levels/city.gd" id="1_vjy5h"]
+[ext_resource type="Texture2D" uid="uid://o4fcvijkh4pp" path="res://assets/backgrounds/Sky.svg" id="2_b2uvr"]
 [ext_resource type="PackedScene" uid="uid://24sqynbsqb3s" path="res://characters/building_small.tscn" id="3_a3k8j"]
 [ext_resource type="PackedScene" uid="uid://it6xcjm6ica1" path="res://characters/door.tscn" id="4_wge1x"]
 [ext_resource type="PackedScene" uid="uid://nc6ndb6lmk3x" path="res://characters/building_medium.tscn" id="5_eojfc"]
@@ -510,6 +511,18 @@ distance = 1.0
 [node name="City" type="Node2D"]
 script = ExtResource("1_vjy5h")
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.45, 0.45)
+motion_mirroring = Vector2(318, 238)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("2_b2uvr")
+centered = false
+
 [node name="Buildings" type="Node2D" parent="."]
 
 [node name="SmallBuilding" parent="Buildings" instance=ExtResource("3_a3k8j")]
@@ -594,7 +607,7 @@ scale = Vector2(0.15, 0.15)
 
 [node name="Camera2D" type="Camera2D" parent="TheBlatCity"]
 position = Vector2(1, 0)
-zoom = Vector2(1.945, 1.945)
+zoom = Vector2(2, 2)
 
 [node name="People" type="Node2D" parent="."]
 

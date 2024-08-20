@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://co0h0ljgpwo3b"]
+[gd_scene load_steps=4 format=3 uid="uid://co0h0ljgpwo3b"]
 
 [ext_resource type="FontFile" uid="uid://bx467smp0sres" path="res://external_assets/matemasie/Matemasie-Regular.ttf" id="1_4e4l6"]
 [ext_resource type="Script" path="res://menus/main_menu.gd" id="1_rcoai"]
+[ext_resource type="Texture2D" uid="uid://ym55gv56t5eh" path="res://assets/backgrounds/TitleBackground.svg" id="2_fm7mg"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -13,6 +14,10 @@ offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rcoai")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(586, 289)
+texture = ExtResource("2_fm7mg")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
@@ -34,22 +39,21 @@ vertical_alignment = 1
 
 [node name="TagLine" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -441.5
-offset_top = -126.0
-offset_right = 441.5
-offset_bottom = -25.0
-grow_horizontal = 2
+offset_left = 32.0
+offset_top = -129.0
+offset_right = 696.0
+offset_bottom = 59.0
 grow_vertical = 2
 text = "Beware of the Blat!
-It creeps, and leaps, and glides and gets zoomies, bloated with the blood of its victims!
 
-To Play: Move with WASD or arrow keys, eat things to get bigger"
-horizontal_alignment = 1
+It creeps, and leaps, and glides and gets zoomies,
+bloated with the blood of its victims!
+
+To Play: Move with WASD or arrow key
+Eat things to get bigger"
 vertical_alignment = 1
 
 [node name="PlayButton" type="Button" parent="."]
@@ -60,9 +64,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -195.5
-offset_top = 1.0
+offset_top = 88.0
 offset_right = 195.5
-offset_bottom = 112.0
+offset_bottom = 199.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 75
@@ -76,9 +80,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -351.0
-offset_top = -143.0
+offset_top = -118.0
 offset_right = 351.0
-offset_bottom = -32.0
+offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 75

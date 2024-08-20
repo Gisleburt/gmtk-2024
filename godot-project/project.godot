@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="The Blat"
-config/version="0.4.2"
+config/version="0.4.3"
 run/main_scene="res://menus/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
+boot_splash/bg_color=Color(0.117647, 0.12549, 0.721569, 1)
 config/icon="res://icon.svg"
 
 [display]
@@ -78,3 +79,4 @@ right={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.117647, 0.12549, 0.721569, 1)

@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://nc6ndb6lmk3x" path="res://characters/building_medium.tscn" id="5_eojfc"]
 [ext_resource type="PackedScene" uid="uid://dq3ydytbwu045" path="res://characters/the_blat_city.tscn" id="6_2yqip"]
 [ext_resource type="PackedScene" uid="uid://78ubvgxeso07" path="res://characters/building_large.tscn" id="6_poo62"]
-[ext_resource type="AudioStream" uid="uid://naub5gpe7wso" path="res://assets/music/Ethereal - Becoming Loop.mp3" id="8_vxmdt"]
+[ext_resource type="AudioStream" uid="uid://5us2gv8qjcb2" path="res://assets/music/Ethereal - Disturbance Loop.mp3" id="8_q2xft"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6vr3g"]
 texture = ExtResource("1_6lta0")
@@ -629,7 +629,7 @@ position = Vector2(0, 3)
 shape = SubResource("WorldBoundaryShape2D_g5aed")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_vxmdt")
+stream = ExtResource("8_q2xft")
 autoplay = true
 
 [connection signal="ate_building" from="TheBlatCity" to="." method="_on_the_blat_city_ate_building"]

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bed1h63p1joby" path="res://assets/backgrounds/Rings.svg" id="5_dc62i"]
 [ext_resource type="PackedScene" uid="uid://c3cgni81tcdnh" path="res://characters/stellar_blat.tscn" id="5_neuxi"]
 [ext_resource type="Texture2D" uid="uid://cxs5eu3p2sl8n" path="res://assets/backgrounds/Asteroids.svg" id="6_4sff8"]
-[ext_resource type="AudioStream" uid="uid://naub5gpe7wso" path="res://assets/music/Ethereal - Becoming Loop.mp3" id="8_3q2e2"]
+[ext_resource type="AudioStream" uid="uid://degcpp0yf3ano" path="res://assets/music/Ethereal - Cathedrals Loop.mp3" id="8_g446y"]
 
 [sub_resource type="Curve2D" id="Curve2D_v0dy6"]
 _data = {
@@ -330,7 +330,7 @@ scale = Vector2(0.11, 0.11)
 zoom = Vector2(9.091, 9.091)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_3q2e2")
+stream = ExtResource("8_g446y")
 autoplay = true
 
 [connection signal="scale_change" from="Node2D/StellarBlat" to="." method="_on_stellar_blat_scale_change"]

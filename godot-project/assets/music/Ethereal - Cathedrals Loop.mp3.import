@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://degcpp0yf3ano"
+path="res://.godot/imported/Ethereal - Cathedrals Loop.mp3-4f73e5d01dccf04d54ec5f9bfc101ff4.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Ethereal - Cathedrals Loop.mp3"
+dest_files=["res://.godot/imported/Ethereal - Cathedrals Loop.mp3-4f73e5d01dccf04d54ec5f9bfc101ff4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

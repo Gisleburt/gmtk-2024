@@ -54,7 +54,7 @@ func eat(edible) -> void:
 	edible.queue_free()
 	var player_idx = rng.randi_range(1, $BiteNoises.get_child_count())
 	$BiteNoises.get_child(player_idx - 1).play()
-	var change = edible.scale * 0.33
+	var change = edible.scale * 0.4
 	scale += change
 	scale_change.emit(change, scale.x)
 

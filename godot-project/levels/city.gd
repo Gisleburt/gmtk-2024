@@ -77,3 +77,7 @@ func _on_the_blat_city_ate_person() -> void:
 
 func _on_the_blat_city_ate_building() -> void:
 	$TheBlatCity.scale += Vector2(0.1, 0.1)
+
+
+func _on_timer_timeout() -> void:
+	$Tutorial.visible = false

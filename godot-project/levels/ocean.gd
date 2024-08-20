@@ -53,3 +53,7 @@ func get_random_point_outside_safe_zone() -> Vector2:
 	var progress = rng.randf_range(0.0, 1.0)
 	$SpawnPaths/OutsideSafeZone/PathFollow2D.progress_ratio = progress
 	return $SpawnPaths/OutsideSafeZone/PathFollow2D.global_position
+
+
+func _on_timer_timeout() -> void:
+	$Tutorial.visible = false

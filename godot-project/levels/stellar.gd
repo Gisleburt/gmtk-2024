@@ -79,3 +79,7 @@ func _on_stellar_blat_win_condition_eaten() -> void:
 
 #func _on_stellar_blat_scale_change(change: float, _scale: float) -> void:
 	#target_zoom = maxf(max_zoom, target_zoom - change)
+
+
+func _on_timer_timeout() -> void:
+	$Node2D2/Tutorial.visible = false

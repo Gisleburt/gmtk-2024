@@ -333,5 +333,50 @@ zoom = Vector2(9.091, 9.091)
 stream = ExtResource("8_g446y")
 autoplay = true
 
+[node name="Node2D2" type="Node2D" parent="."]
+scale = Vector2(0.25, 0.25)
+
+[node name="Tutorial" type="Control" parent="Node2D2"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2328.0
+offset_top = 356.0
+offset_right = 2328.0
+offset_bottom = 356.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Node2D2/Tutorial"]
+layout_mode = 0
+offset_left = -199.0
+offset_top = 109.0
+offset_right = 196.0
+offset_bottom = 175.0
+color = Color(0.0980392, 0.0980392, 0.0980392, 0.196078)
+
+[node name="Label" type="Label" parent="Node2D2/Tutorial"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -133.5
+offset_top = 116.0
+offset_right = 133.5
+offset_bottom = 165.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Don't ever stop eating.
+Eat moons, eat planets, eat stars"
+
+[node name="Timer" type="Timer" parent="Node2D2/Tutorial"]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
 [connection signal="scale_change" from="Node2D/StellarBlat" to="." method="_on_stellar_blat_scale_change"]
 [connection signal="win_condition_eaten" from="Node2D/StellarBlat" to="." method="_on_stellar_blat_win_condition_eaten"]
+[connection signal="timeout" from="Node2D2/Tutorial/Timer" to="." method="_on_timer_timeout"]
